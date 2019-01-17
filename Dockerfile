@@ -9,7 +9,7 @@ RUN rm -rf /var/cache/apk/* && \
     rm -rf /tmp/* && \ 
    apk --update add bash wget ca-certificates sudo openssh rsync openjdk8
 
-ADD wlp.tar /etc/
+ADD wlp.tar.gz /etc/
 RUN chmod -R o+x $WLP_HOME
 
 VOLUME ["$WLP_HOME/config"]
